@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import "./ProfilePage.css"
 import Image from "../../Components/Image/Image";
+import Gallery from '../../Components/gallery/Gallery.jsx';
+import Collections from '../../Components/collection/Collections';
 
 const ProfilePage = () => {
   const [type,setType]=useState("created")
@@ -17,12 +19,16 @@ const ProfilePage = () => {
       <button className='Follow'>Follow</button>
       </div>
       <Image path="General/more.svg" alt=""/>
-    </div>
+    </div>  
 
     <div className="profileOptions">
       <span onClick={()=>setType("created")} className={type==="created" ? "active" : ""}>Created</span>
       <span onClick={()=>setType("saved")} className={type==="saved" ? "active" : ""}>Saved</span>
     </div>
+
+      <div>
+        {type==="created"? <Gallery /> : <Collections />}
+      </div>
 
 
     </div>

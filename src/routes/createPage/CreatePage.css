@@ -1,0 +1,124 @@
+.createTop{
+    border-top: 1px solid aliceblue;
+    border-bottom: 1px solid aliceblue;
+    padding: 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.createTop h1{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.createTop button{
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding: 16px;
+    border-radius: 32px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.createTop button:hover{
+    background-color: rgb(137, 0, 0);
+}
+
+.createBottom{
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+
+.upload{
+    background-color: aliceblue;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    border: 2px dashed gray;
+    width: 375px;
+    height: 574px;
+    padding: 16px;
+    position: relative;
+
+}
+
+.uploadTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.uploadInfo{
+    position: absolute;
+    bottom: 32px;
+    font-size: 16px;
+    text-align: center;
+    color: gray;
+}
+
+.createForm{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 584px;
+
+}
+
+.createformItem{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.createformItem label{
+    font-size: 13px;
+    color: gray;
+
+}
+
+.createformItem input,select,textarea{
+font-size: 15px;
+border: 2px solid gray;
+padding: 16px;
+border-radius: 16px ;
+}
+
+.createformItem textarea{
+    resize: none;
+}
+
+small{
+    color:gray;
+    font-size: 12px;
+}
+
+@media (max-width:1108px){
+    .createBottom{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width:760px){
+    .createForm{
+        width: 100%;
+    }
+}
+
+@media (max-width:475px){
+    .upload{
+        width: 100%;
+    }
+}
+

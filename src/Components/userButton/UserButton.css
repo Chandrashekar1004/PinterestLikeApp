@@ -1,0 +1,66 @@
+.userButton {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.userButton img {
+    height: 48px;
+    width: 48px;
+    border-radius: 100%; 
+    object-fit: cover;
+}
+
+.userButton .arrow {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+.loginLink {
+    font-size: 18px;
+    padding: 16px;
+    border-radius: 32px;
+}
+
+.loginLink:hover {
+    background-color: aliceblue;
+}
+
+/* Initially hide userOptions */
+.userOptions {
+    position: absolute;
+    right: 0;
+    top: 110%;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: white;
+    z-index: 999;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Show userOptions only when .userButton has the 'open' class */
+.userButton.open .userOptions {
+    display: flex; /* Show options when open is true */
+}
+
+.userOption{
+    padding: 16px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.userOption:hover{
+    background-color: aliceblue;
+}
+
+@media (max-width:475px){
+    .userButton{
+        display: none;
+    }
+}

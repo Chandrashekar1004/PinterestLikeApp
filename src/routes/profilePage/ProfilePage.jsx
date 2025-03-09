@@ -2,8 +2,8 @@ import React from 'react'
 import "./ProfilePage.css"
 const ProfilePage = () => {
   return (
-    <div>
-      
+    <div className="profilePage"> 
+    
     </div>
   )
 }

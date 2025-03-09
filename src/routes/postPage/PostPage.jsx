@@ -23,7 +23,7 @@ const PostPage = () => {
           </div>
           <div className="postDetails">
               <PostInteractions />
-              <Link to="/john" className="postUser">
+              <Link to="/Iyer" className="postUser">
               <Image path="General/noAvatar.png" alt=""/>
               <span> Iyer</span>
               </Link>

@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-import { BrowserRouter,Routes,Route, HashRouter } from 'react-router'
+import { BrowserRouter,Routes,Route } from 'react-router'
 import CreatePage from './routes/createPage/CreatePage.jsx'
 import PostPage from './routes/postPage/PostPage.jsx'
 import AuthPage from './routes/authPage/AuthPage.jsx'
@@ -16,7 +16,7 @@ import MainLayout from './routes/Layouts/MainLayout.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route element={<MainLayout />}>
       <Route path="/" element={<Homepage />} />
@@ -28,6 +28,6 @@ createRoot(document.getElementById('root')).render(
       <Route path="/auth" element={<AuthPage />} />
 
     </Routes>
-    </HashRouter>  
+    </BrowserRouter>  
   </StrictMode>,
 )
